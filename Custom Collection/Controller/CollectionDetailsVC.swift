@@ -108,16 +108,18 @@ class CollectionDetailsVC: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        let height:CGFloat = 10
+        return height
+    }
+    
     func loadImage(url:String)-> Data{
         let url = URL(string: url)
         let data = try? Data(contentsOf: url!)
         return data!
     }
     
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        let height:CGFloat = 10
-        return height
-    }
+    
     
     func getAllVariants(variants:JSON)->String{
         var text = ""

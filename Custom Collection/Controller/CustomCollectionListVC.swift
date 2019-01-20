@@ -57,6 +57,8 @@ class CustomCollectionListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CCLidentifier", for: indexPath)
         cell.textLabel?.text = COLLECTIONS[indexPath.row]
+        cell.textLabel?.font = UIFont(name:"HelveticaNeue-Bold", size: 20.0)
+
         cell.backgroundColor = .clear
         return cell
     }
