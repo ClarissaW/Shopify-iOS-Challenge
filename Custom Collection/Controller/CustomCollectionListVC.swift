@@ -18,11 +18,12 @@ class CustomCollectionListVC: UITableViewController {
     var json:JSON?
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
         tableView.layer.borderColor = UIColor.black.cgColor
         tableView.layer.borderWidth = 1
         tableView.layer.cornerRadius = 8
         tableView.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+       
     }
     
     
@@ -30,6 +31,8 @@ class CustomCollectionListVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title="Collections"
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font:UIFont(name:"HelveticaNeue-Bold", size: 24.0)]
         
     }
     

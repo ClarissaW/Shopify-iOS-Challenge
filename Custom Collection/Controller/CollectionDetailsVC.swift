@@ -21,7 +21,10 @@ class CollectionDetailsVC: UITableViewController {
         tableView.register(UINib(nibName: "DetailTableViewCell", bundle: nil), forCellReuseIdentifier: "detailCellIdentifier")
         
         self.navigationItem.title = titleValue
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        
+        
+        navigationController?.navigationBar.tintColor=#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
         self.navigationController!.navigationBar.topItem!.title = ""
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()
@@ -89,7 +92,7 @@ class CollectionDetailsVC: UITableViewController {
         // Set TableView Background and shape
         cell.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
+        cell.layer.borderWidth = 4
         cell.layer.cornerRadius = 8
         cell.selectionStyle = .none
         
